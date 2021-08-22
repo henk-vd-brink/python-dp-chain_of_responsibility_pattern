@@ -1,3 +1,9 @@
-Example code for extendable parcel distribution center. 
+This code is written for practicing purposes.
 
-Credits to Wouter van N.
+**Run code**
+
+Command: python app
+
+**Source**
+
+Wouter v. N.

@@ -12,15 +12,12 @@ class CustomerSupport:
         self.tickets.append(SupportTicket(customer, issue))
 
     def process_tickets(self):
-        # create the ordered list
         ticket_list = self.processing_strategy.create_ordering(self.tickets)
 
-        # if it's empty, don't do anything
-        if len(ticket_list) == 0:
-            print("There are no tickets to process. Well done!")
-            return
+        if len(ticket_list):
+            print("There are no tickets to process, number of tickets equals zero.")
+            return None
 
-        # go through the tickets in the list
         for ticket in ticket_list:
             self.process_ticket(ticket)
 

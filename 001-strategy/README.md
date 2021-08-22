@@ -1,7 +1,7 @@
 This code is written for practicing purposes.
 
-## Run code
+**Run code**
 Command: python app
 
-## Source
+**Source**
 https://github.com/ArjanCodes/betterpython

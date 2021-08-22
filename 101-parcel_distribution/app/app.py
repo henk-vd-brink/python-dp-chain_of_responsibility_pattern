@@ -5,7 +5,7 @@ from src.parcel import Parcel
 from abc import ABC, abstractmethod
 
 class BuildChain(ABC):
-    
+
     def __init__(self, *args, **kwargs):
         self._chain = self._build_chain()
     
@@ -32,7 +32,7 @@ class BuildChainCompanyA(BuildChain):
         return mail_department
 
 
-if __name__ == "__main__":
+def run():
     chain = BuildChainCompanyA().chain
     parcels = [Parcel(weight=0.5), Parcel(weight=8), Parcel(weight=11)]
 

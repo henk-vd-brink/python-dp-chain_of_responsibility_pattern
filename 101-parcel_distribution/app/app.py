@@ -1,21 +1,9 @@
-from src.departments import (  MailDepartment, 
+from src import (   Parcel, 
+                    BuildChain,
+                    MailDepartment, 
                     RegularDepartment,
                     HeavyDepartment )
-from src.parcel import Parcel
 from abc import ABC, abstractmethod
-
-class BuildChain(ABC):
-
-    def __init__(self, *args, **kwargs):
-        self._chain = self._build_chain()
-    
-    @abstractmethod
-    def _build_chain(self):
-        pass
-
-    @property
-    def chain(self):
-        return self._chain
 
 class BuildChainCompanyA(BuildChain):
     

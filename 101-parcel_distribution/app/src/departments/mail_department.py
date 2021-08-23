@@ -1,4 +1,4 @@
-from .abstract_department import Department
+from .department import Department
 
 class MailDepartment(Department):
 

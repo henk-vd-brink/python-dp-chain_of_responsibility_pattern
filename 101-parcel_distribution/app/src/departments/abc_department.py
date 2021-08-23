@@ -1,22 +1,20 @@
 from abc import ABC, abstractmethod
 
-class Department(ABC):
-
+class ABCDepartment(ABC):
+    
     @property
+    @abstractmethod
     def successor(self):
-        return self._successor
+        pass
 
     @successor.setter
+    @abstractmethod
     def successor(self, successor):
-        self._successor = successor
+        pass
 
+    @abstractmethod
     def handle(self, parcel):
-        if self.can_handle(parcel):
-            self.handle_parcel(parcel)
-        elif self._successor:
-            self._successor.handle(parcel)
-        else:
-            raise NotImplementedError
+        pass
 
     @abstractmethod
     def can_handle(self, parcel):
@@ -25,9 +23,3 @@ class Department(ABC):
     @abstractmethod
     def handle_parcel(self, parcel):
         pass
-
-
-
-
-
-    

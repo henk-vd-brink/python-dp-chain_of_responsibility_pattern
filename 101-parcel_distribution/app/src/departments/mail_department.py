@@ -1,6 +1,6 @@
-from .department import Department
+from .abc_department import ABCDepartment
 
-class MailDepartment(Department):
+class MailDepartment(ABCDepartment):
 
     def can_handle(self, parcel):
         return (parcel.weight < 1)

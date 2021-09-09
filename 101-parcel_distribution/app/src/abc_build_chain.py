@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 
-class BuildChain(ABC):
+class ABCBuildChain(ABC):
 
     def __init__(self, *args, **kwargs):
         self._chain = self._build_chain()

@@ -1,11 +1,14 @@
 from src import (   Parcel, 
-                    BuildChain,
+                    ABCBuildChain,
+                    XmlParser,
                     MailDepartment, 
                     RegularDepartment,
                     HeavyDepartment )
-from abc import ABC, abstractmethod
 
-class BuildChainCompanyA(BuildChain):
+FILE_URI = "app/data/parcels.xml"
+parser = XmlParser(file_uri=FILE_URI)
+
+class BuildChainCompanyA(ABCBuildChain):
     
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -21,8 +24,8 @@ class BuildChainCompanyA(BuildChain):
 
 
 def run():
+    parcels = parser.get_parcels()
     chain = BuildChainCompanyA().chain
-    parcels = [Parcel(weight=0.5), Parcel(weight=8), Parcel(weight=11)]
 
     for parcel in parcels:
         chain.handle(parcel)

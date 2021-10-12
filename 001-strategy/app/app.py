@@ -9,7 +9,7 @@ from src import (   FIFOOrderingStrategy,
                     CustomerSupport)
 
 def run():
-    app = CustomerSupport(RandomOrderingStrategy())
+    app = CustomerSupport(processing_strategy=FILOOrderingStrategy())
 
     app.create_ticket("John Smith", "My computer makes strange sounds!")
     app.create_ticket("Linus Sebastian", "I can't upload any videos, please help.")

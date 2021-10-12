@@ -14,12 +14,13 @@ class CustomerSupport:
     def process_tickets(self):
         ticket_list = self.processing_strategy.create_ordering(self.tickets)
 
-        if len(ticket_list):
+        if len(ticket_list) == 0:
             print("There are no tickets to process, number of tickets equals zero.")
-            return None
+            return
 
         for ticket in ticket_list:
             self.process_ticket(ticket)
+            
 
     def process_ticket(self, ticket: SupportTicket):
         print("==================================")

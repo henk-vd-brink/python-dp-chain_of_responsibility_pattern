@@ -1,18 +1,19 @@
-from src import (   Parcel, 
-                    ABCBuildChain,
-                    XmlParser,
-                    MailDepartment, 
-                    RegularDepartment,
-                    HeavyDepartment )
+from lib import (
+    BaseBuildChain,
+    XmlParser,
+    MailDepartment,
+    RegularDepartment,
+    HeavyDepartment,
+)
 
 FILE_URI = "app/data/parcels.xml"
 parser = XmlParser(file_uri=FILE_URI)
 
-class BuildChainCompanyA(ABCBuildChain):
-    
+
+class BuildChainCompanyA(BaseBuildChain):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-    
+
     def _build_chain(self):
         mail_department = MailDepartment()
         regular_department = RegularDepartment()

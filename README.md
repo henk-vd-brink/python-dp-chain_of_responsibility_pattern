@@ -1,8 +1,21 @@
-# Design Patterns: Chain of Responsibility
-
+## About the Project
 This code is written to get a better understanding Chain of Responsibility Design Pattern.
 
-# Structure
+## Getting Started
+
+### Installation
+```
+git clone https://github.com/henk-vd-brink/python-dp-chain_of_responsibility.git
+cd python-dp-chain_of_responsibility
+```
+
+### Run
+```
+python app
+```
+
+
+## Structure
 ```bash
 .
 ├── README.md
@@ -27,11 +40,3 @@ This code is written to get a better understanding Chain of Responsibility Desig
     └── tests
         └── test.py
 ```
-
-# Usage 
-
-Command: 
-```bash
-python app
-```
-
